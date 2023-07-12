@@ -3,13 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState,useEffect } from "react";
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react';
+import { useRouter } from "next/navigation";
 
 const Nav = () => {
     const {data: session} = useSession();
-
+    
     const [toggleDropDown,setToggleDropDown]=useState(false);
     const [providers,setProviders]=useState(null);
-
+    const router=useRouter();
     useEffect(()=>{
         const setUpProviders = async()=>{
             const response=await getProviders();
@@ -20,6 +21,13 @@ const Nav = () => {
         setUpProviders();
     },[])
 
+    const handleSignoutClick= async()=>{
+        
+       await signOut({ redirect: false });   
+        router.push("/");
+       
+    };
+    
   return (
     <nav className="flex-between w-full mb-16 pt-3">
         <Link href='/' className="flex gap-2 flex-center">
@@ -44,9 +52,13 @@ const Nav = () => {
 
                         Create Post
                     </Link>
+                   
                     <button type="button" 
-                    onClick={signOut} 
-                    className="outline_btn">Sign Out</button>
+                    onClick={handleSignoutClick} 
+                    className="outline_btn">
+                    Sign Out    
+                    </button>
+                    
 
                     <Link href='/profile'>
                         <Image src={session?.user.image} 
