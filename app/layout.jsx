@@ -8,7 +8,7 @@ export const metadata={
     description:"Discover & Share Best AI Prompts"
 }
 
-const Rootlayout = ({children}) => {
+const RootLayout = ({children}) => {
   return (
     <html lang='en'>
         <body>
@@ -26,4 +26,4 @@ const Rootlayout = ({children}) => {
   )
 }
 
-export default Rootlayout;
+export default RootLayout;
