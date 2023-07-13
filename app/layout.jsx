@@ -1,7 +1,7 @@
  
 import '@styles/globals.css'
-import Nav from '@Components/Nav';
-import Provider from '@Components/Provider';
+import Nav from '@components/Nav';
+import Provider from '@components/Provider';
 
 export const metadata={
     title:"Promptnation",
