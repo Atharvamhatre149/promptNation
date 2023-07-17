@@ -7,6 +7,8 @@ One of the key features of Promptnation is the ability to explore and discover p
 
 Promptnation offers a versatile and comprehensive platform for users to interact with AI models through prompts. By leveraging NextJS, the application provides a robust and responsive user experience, making it effortless for users to share, discover, and engage with prompts in a collaborative environment.
 
+This is the link for the web-application :- https://prompt-nation.vercel.app/
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
